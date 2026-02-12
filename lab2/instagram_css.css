@@ -83,6 +83,10 @@
     margin-left: 20px;
     margin-top: 15px;
 }
+.forgot_password button:hover{
+    background-color: #f0f2f5;
+}
+
 .facebook button{
     width: 540px;
     height: 45px;
