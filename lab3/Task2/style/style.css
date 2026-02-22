@@ -31,7 +31,7 @@ body {
     border-radius: 20px;
     padding: 30px;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     backdrop-filter: blur(10px);
 }
@@ -74,7 +74,32 @@ body {
 
 }
 
+.n-btn:hover {
+    background: #5555ff;
+}
 
+.new-btn {
+    height: 50px;
+    min-width: 80px;
+    border-radius: 12px;
+    border: none;
+    background:blue;
+    font-weight: 600;
+    color:white;
+
+}
+
+
+.newqw-btn {
+    height: 50px;
+    min-width: 80px;
+    border-radius: 12px;
+    border: none;
+    background:blue;
+    font-weight: 600;
+    color:white;
+
+}
 
 .note-card {
     width: 100%;

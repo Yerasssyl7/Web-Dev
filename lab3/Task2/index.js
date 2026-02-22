@@ -47,3 +47,24 @@ document.getElementById('input').addEventListener('keypress', function(e) {
         createNote(this.value);
     }
 });
+
+function viewCompletedTasks() {
+    const completedTasks = document.querySelectorAll('.list li.completed');
+    if (completedTasks.length === 0) {
+        alert('No completed tasks!');
+        return;
+    }
+
+    const tasksText = Array.from(completedTasks).map(li => li.querySelector('span').textContent).join('\n');
+    alert(`Completed Tasks:\n${tasksText}`);
+}   
+
+function viewUncompletedTasks() {
+    const uncompletedTasks = document.querySelectorAll('.list li:not(.completed)');
+    if (uncompletedTasks.length === 0) {
+        alert('No uncompleted tasks!');
+        return;
+    }
+    const tasksText = Array.from(uncompletedTasks).map(li => li.querySelector('span').textContent).join('\n');
+    alert(`Uncompleted Tasks:\n${tasksText}`);
+}
