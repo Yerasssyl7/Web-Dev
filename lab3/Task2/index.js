@@ -68,3 +68,4 @@ function viewUncompletedTasks() {
     const tasksText = Array.from(uncompletedTasks).map(li => li.querySelector('span').textContent).join('\n');
     alert(`Uncompleted Tasks:\n${tasksText}`);
 }
+
