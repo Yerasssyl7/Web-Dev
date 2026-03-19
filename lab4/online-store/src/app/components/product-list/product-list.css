@@ -69,3 +69,10 @@
   display: block;
   padding: 6px 0;
 }
+
+.sort {
+  margin: 20px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}

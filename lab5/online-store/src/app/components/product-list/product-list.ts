@@ -27,4 +27,9 @@ export class ProductList implements OnChanges {
   onDelete(id: number): void {
     this.displayProducts = this.displayProducts.filter((p) => p.id !== id);
   }
+  max_value(): void {
+    const maxPrice = this.displayProducts.reduce((max, product) => { 
+      return product.price > max ? product.price : max;}, 0);
+    this.displayProducts = this.displayProducts.filter(p => p.price === maxPrice);
+  } 
 }

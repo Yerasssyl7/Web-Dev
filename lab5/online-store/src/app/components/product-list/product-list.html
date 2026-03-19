@@ -2,6 +2,12 @@
   No products in this category.
 </p>
 
+<div class="max">
+    <button (click)="max_value()">
+      Max price
+    </button>
+  </div>
+
 <div class="product-grid" *ngIf="displayProducts.length > 0">
   <app-product-item
     *ngFor="let product of displayProducts"
@@ -9,3 +15,5 @@
     (deleteProduct)="onDelete($event)"
   ></app-product-item>
 </div>
+
+

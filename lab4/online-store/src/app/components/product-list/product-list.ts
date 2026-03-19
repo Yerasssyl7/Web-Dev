@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './product-list.html',
   styleUrls: ['./product-list.css'],
 })
+
 export class ProductList {
   // Expose global function to the template
   encodeURIComponent = encodeURIComponent;
@@ -85,7 +86,7 @@ export class ProductList {
       'name': 'Смартфон Apple iPhone 16 128Gb черный',
       'description': 'Apple iPhone 16 128GB (Black) — это флагманский смартфон 2024 года с 6,1-дюймовым OLED-дисплеем Super Retina XDR, процессором A18 Bionic и разъемом Lightning. Основная камера 12 Мп обеспечивает высокую детализацию, поддерживается 5G, беспроводная зарядка MagSafe и защита от воды IP68. Корпус выполнен из алюминия и прочного стекла',
       'price': 449750,
-      'rating': 4.9,
+      'rating': 4.8,
       'images': [
         'https://resources.cdn-kaspi.kz/img/m/p/hf3/h65/87295470731294.png?format=gallery-medium',
         'https://resources.cdn-kaspi.kz/img/m/p/he0/ha4/87295470764062.png?format=gallery-medium',
@@ -99,7 +100,7 @@ export class ProductList {
       'name': 'Смартфон Apple iPhone 13 128Gb белый',
       'description': 'Apple iPhone 13 128GB (White) — это флагманский смартфон 2021 года с 6,1-дюймовым OLED-дисплеем Super Retina XDR, процессором A15 Bionic и разъемом Lightning. Основная камера 12 Мп обеспечивает высокую детализацию, поддерживается 5G, беспроводная зарядка MagSafe и защита от воды IP68. Корпус выполнен из алюминия и прочного стекла',
       'price': 315284,
-      'rating': 4.9,
+      'rating': 4.7,
       'images': [
         'https://resources.cdn-kaspi.kz/img/m/p/hc9/h90/64209083007006.jpg?format=gallery-medium',
         'https://resources.cdn-kaspi.kz/img/m/p/h3b/h93/64209085235230.jpg?format=gallery-medium',
@@ -141,7 +142,7 @@ export class ProductList {
       'name': 'Смартфон Apple iPhone 17 Pro Max 256Gb темно-синий',
       'description': 'Apple iPhone 17 Pro Max в цвете Midnight Blue (темно-синий) с 256 ГБ встроенной памяти — флагман 2025 года с 6,7-дюймовым дисплеем Super Retina XDR (120 Гц). Смартфон работает на процессоре A19 Pro, имеет 12 ГБ ОЗУ, улучшенную тройную камеру 48 Мп с 8-кратным зумом и разъем USB-C. Отличается алюминиевым корпусом, ИИ-функциями (Apple Intelligence) и поддержкой 5G, Wi-Fi 7',
       'price': 794400,
-      'rating': 5.0,
+      'rating': 4.3,
       'images': [
         'https://resources.cdn-kaspi.kz/img/m/p/pd9/pf2/64169612.png?format=gallery-medium',
         'https://resources.cdn-kaspi.kz/img/m/p/p65/p0f/64476280.jpg?format=gallery-medium',
@@ -149,6 +150,14 @@ export class ProductList {
         'https://resources.cdn-kaspi.kz/img/m/p/p84/pf2/64169615.png?format=gallery-medium'
       ],
       'link': 'https://kaspi.kz/shop/p/apple-iphone-17-pro-max-256gb-temno-sinii-145440732/?c=750000000'
-    }
-  ]
+    } 
+  ];
+  SortByDesc() {
+    this.products.sort((a, b) => b.rating - a.rating);
+  }
+  SortByAsc() {
+    this.products.sort((a, b) => a.rating - b.rating);
+  }
 }
+
+
