@@ -64,3 +64,4 @@ def category_products(request, category_id):
     category = get_object_or_404(Category, pk=category_id)
     data = [_serialize_product(product) for product in category.products.all()]
     return JsonResponse(data, safe=False)
+
